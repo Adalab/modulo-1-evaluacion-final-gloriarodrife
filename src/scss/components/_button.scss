@@ -1,0 +1,17 @@
+.button {
+  width: 176px;
+  height: 48px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: $primary-color;
+  background-color: $secondary-color;
+  padding: 0 auto 76px auto;
+  transition: color ease 1s;
+  opacity: 3;
+  &:hover {
+    opacity: 1;
+    transform: translate(0, -2px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29),
+      inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  }
+}
