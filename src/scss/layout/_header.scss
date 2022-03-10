@@ -33,15 +33,6 @@
       align-items: center;
       gap: 40px;
       padding-bottom: 64px;
-
-      &--title {
-        font-size: 1.4rem;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-
-        color: $secondary-color;
-      }
     }
   }
 
@@ -54,7 +45,6 @@
     display: none;
   }
 }
-
 // @media all and (max-width: 1200px) {
 //   .header {
 //     &__nav--menu {
