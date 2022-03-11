@@ -19,6 +19,8 @@
 
   @include tablet() {
     font-size: 2.25rem;
+    height: 112px;
+    width: 430px;
   }
   @include desktop() {
     font-size: 2.25rem;
