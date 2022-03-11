@@ -8,6 +8,15 @@
     padding: 56px 20px 56px 146px;
     position: relative;
 
+    @include tablet() {
+      flex-direction: row;
+      gap: 70px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    @include desktop() {
+      gap: 200px;
+    }
     &--section {
       color: $text-color;
       font-size: 1.25rem;
@@ -31,7 +40,7 @@
 
       &--social-links {
         display: flex;
-        gap: 8px;
+        gap: 10px;
         color: white;
         margin-top: 20px;
 
@@ -43,11 +52,34 @@
     }
 
     &--arrow {
-      color: white;
       position: absolute;
       bottom: 10px;
       right: 28px;
       width: 16px;
+      animation-name: arrow;
+      animation-duration: 1.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      @keyframes arrow {
+        0% {
+          transform: translate(0, -5px);
+        }
+        50% {
+          transform: translate(0, 10px);
+        }
+        100% {
+          transform: translate(0, -5px);
+        }
+      }
+      &--link {
+        color: white;
+      }
+      @include tablet() {
+        bottom: 60px;
+      }
+      @include desktop() {
+        bottom: 138px;
+      }
     }
   }
 }
