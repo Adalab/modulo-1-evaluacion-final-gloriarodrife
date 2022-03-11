@@ -2,23 +2,41 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 1fr 2fr;
-
+  @include tablet() {
+    grid-template-rows: 1fr 1fr 2fr;
+  }
   &__benefits {
     background-color: $primary-color;
     text-align: center;
     display: grid;
     justify-items: center;
-    align-items: stretch;
-
+    height: 100%;
+    @include tablet() {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 3fr;
+      padding-bottom: 73px;
+    }
     &--title {
       display: grid;
       align-content: center;
+      @include tablet() {
+        grid-column: 1/4;
+        font-size: 1.5rem;
+        padding-top: 60px;
+        padding-bottom: 70px;
+      }
+      @include desktop() {
+        height: 122px;
+        width: 800px;
+      }
     }
     &--article {
       width: 208px;
       display: grid;
       justify-items: center;
       align-content: center;
+
       &--icon {
         width: 90px;
         padding-bottom: 20px;
@@ -48,13 +66,23 @@
     &--title {
       font-size: 1.5rem;
       font-weight: bold;
+      @include tablet() {
+        font-size: 1.875rem;
+      }
+      @include desktop() {
+        font-size: 2.25rem;
+      }
     }
     &--text {
       font-size: 0.875rem;
       margin-bottom: 20px;
+      @include desktop() {
+        font-size: 1rem;
+      }
     }
     &--link {
       color: $text-color-secondary;
+      font-size: 1rem;
     }
   }
 
@@ -62,10 +90,11 @@
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    @include desktop() {
+      flex-direction: row;
+    }
     &--content {
-      height: 100%;
+      height: 50%;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -73,13 +102,25 @@
       align-items: center;
       gap: 30px;
 
+      @include desktop() {
+        height: 100%;
+        width: 50%;
+      }
       &--text {
         font-size: 0.875rem;
         color: $secondary-color;
+        @include desktop() {
+          font-size: 1rem;
+        }
       }
     }
     &--img {
       width: 100%;
+      height: 50%;
+      @include desktop() {
+        height: 100%;
+        width: 50%;
+      }
     }
   }
 }
