@@ -55,17 +55,18 @@
 
   &__nav--menu {
     display: none;
-  }
-
-  &__nav--menu {
     @include desktop {
       display: flex;
       gap: 40px;
       position: fixed;
       left: 10%;
       z-index: 999;
-      text-transform: capitalize;
-      color: $secondary-color;
+
+      &--item {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $secondary-color;
+      }
     }
   }
 }
