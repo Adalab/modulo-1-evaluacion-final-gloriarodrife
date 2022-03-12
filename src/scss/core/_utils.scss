@@ -1,43 +1,43 @@
 .title {
-  font-size: 1.5rem;
+  @include fontSize(24px);
   font-weight: bold;
   color: $secondary-color;
 
   @include tablet() {
-    font-size: 2.25rem;
+    @include fontSize(36px);
   }
   @include desktop() {
-    font-size: 2.25rem;
+    @include fontSize(36px);
     font-weight: bold;
   }
 }
 
 .title-secondary {
-  font-size: 1.5rem;
   font-weight: bold;
   color: $secondary-color;
+  @include fontSize(24px);
 
   @include tablet() {
-    font-size: 2.25rem;
+    @include fontSize(36px);
     height: 112px;
   }
   @include desktop() {
-    font-size: 2.25rem;
+    @include fontSize(36px);
     font-weight: bold;
     text-align: left;
   }
 }
 
 .title-tertiary {
-  font-size: 1.2rem;
+  @include fontSize(20px);
   font-weight: bold;
   color: $secondary-color;
   line-height: normal;
   @include tablet() {
-    font-size: 1.25rem;
+    @include fontSize(20px);
   }
   @include desktop() {
-    font-size: 1.5rem;
+    @include fontSize(24px);
   }
 }
 // wrapper

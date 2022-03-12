@@ -30,9 +30,9 @@
 
       @include tablet() {
         grid-column: 1/4;
-        font-size: 1.5rem;
         padding-top: 60px;
         padding-bottom: 70px;
+        @include fontSize(24px);
       }
 
       @include desktop() {
@@ -56,8 +56,8 @@
       &--text {
         padding-top: 12px;
         color: $secondary-color;
-        font-size: 1rem;
         line-height: normal;
+        @include fontSize(16px);
       }
     }
   }
@@ -78,29 +78,29 @@
     }
 
     &--title {
-      font-size: 1.5rem;
       font-weight: bold;
+      @include fontSize(24px);
 
       @include tablet() {
-        font-size: 1.875rem;
+        @include fontSize(30px);
       }
 
       @include desktop() {
-        font-size: 2.25rem;
+        @include fontSize(36px);
       }
     }
 
     &--text {
-      font-size: 0.875rem;
       margin-bottom: 20px;
+      @include fontSize(14px);
 
       @include desktop() {
-        font-size: 1rem;
+        @include fontSize(16px);
       }
     }
     &--link {
       color: $text-color-secondary;
-      font-size: 1rem;
+      @include fontSize(16px);
     }
   }
 
@@ -138,14 +138,14 @@
       }
 
       &--text {
-        font-size: 0.875rem;
         color: $secondary-color;
+        @include fontSize(14px);
 
         @include desktop() {
           height: 45px;
           width: 281px;
-          font-size: 1rem;
           text-align: left;
+          @include fontSize(16px);
         }
       }
     }
