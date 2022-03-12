@@ -12,3 +12,9 @@ $background-section_color: #ffffff;
 //weight screens
 $tablet: 768px;
 $computer: 1200px;
+
+//Font-sizes
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
