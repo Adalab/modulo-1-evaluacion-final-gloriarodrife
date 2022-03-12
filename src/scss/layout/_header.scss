@@ -7,12 +7,21 @@
   background-repeat: no-repeat;
 
   &__nav--icon {
-    color: $secondary-color;
     position: fixed;
+    z-index: 1;
     left: 35px;
     top: 65px;
-    z-index: 1;
+    color: $secondary-color;
+
+    @include desktop() {
+      display: none;
+    }
   }
+
+  &__nav {
+    display: flex;
+  }
+
   &__content {
     height: 100vh;
     display: flex;
@@ -24,7 +33,10 @@
       display: flex;
       align-items: center;
       padding-top: 27px;
-      // pegarlo a la izquierda y fijarlo
+      @include desktop() {
+        // width: 50vw;
+        display: flex;
+      }
     }
 
     &--article {
@@ -44,11 +56,16 @@
   &__nav--menu {
     display: none;
   }
+
+  &__nav--menu {
+    @include desktop {
+      display: flex;
+      gap: 40px;
+      position: fixed;
+      left: 10%;
+      z-index: 999;
+      text-transform: capitalize;
+      color: $secondary-color;
+    }
+  }
 }
-// @media all and (max-width: 1200px) {
-//   .header {
-//     &__nav--menu {
-//       display: block;
-//     }
-//   }
-// }

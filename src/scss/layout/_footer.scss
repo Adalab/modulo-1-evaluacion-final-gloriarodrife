@@ -14,16 +14,18 @@
       justify-content: flex-start;
       align-items: center;
     }
+
     @include desktop() {
       gap: 200px;
     }
+
     &--section {
       color: $text-color;
       font-size: 1.25rem;
 
       &--title {
-        font-weight: bold;
         margin-bottom: 14px;
+        font-weight: bold;
       }
 
       &--links {
@@ -60,6 +62,7 @@
       animation-duration: 1.8s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+
       @keyframes arrow {
         0% {
           transform: translate(0, -5px);
@@ -71,12 +74,15 @@
           transform: translate(0, -5px);
         }
       }
+
       &--link {
         color: white;
       }
+
       @include tablet() {
         bottom: 60px;
       }
+
       @include desktop() {
         bottom: 138px;
       }

@@ -1,14 +1,15 @@
 .button {
   width: 176px;
   height: 48px;
-  font-weight: bold;
-  font-size: 1rem;
+  padding: 0 auto 76px auto;
   border: 0;
   color: $primary-color;
   background-color: $secondary-color;
-  padding: 0 auto 76px auto;
+  font-weight: bold;
   transition: color ease 1s;
   opacity: 3;
+  @include fontSize(16px);
+
   &:before {
     content: "";
     position: absolute;
@@ -20,9 +21,11 @@
     background: rgba(255, 255, 255, 0.1);
     transition: all 1s ease;
   }
+
   &:hover:before {
     width: inherit;
   }
+
   &:hover {
     opacity: 1;
     transform: translate(0, -3px);
