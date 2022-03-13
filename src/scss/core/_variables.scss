@@ -14,6 +14,11 @@ $tablet: 768px;
 $computer: 1200px;
 
 //Font-sizes
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
 @mixin fontSize($size) {
   font-size: $size;
   font-size: calculateRem($size);
