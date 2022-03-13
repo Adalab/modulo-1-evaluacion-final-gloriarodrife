@@ -1,162 +1,157 @@
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr 2fr;
-
-  @include tablet() {
-    grid-template-rows: 1fr 1fr 2fr;
-  }
-
-  @include desktop() {
-    grid-template-rows: 1fr 1fr 0.5fr;
-  }
-
   // Benefits section
   &__benefits {
-    height: 100%;
-    display: grid;
-    justify-items: center;
     background-color: $primary-color;
-    text-align: center;
+    padding-top: 63px;
+    padding-bottom: 63px;
 
-    @include tablet() {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr 3fr;
-      padding-bottom: 73px;
-    }
+    .benefits {
+      &__inner {
+        display: grid;
+        justify-items: center;
+        gap: 37px;
+        text-align: center;
 
-    &--title {
-      align-content: center;
-
-      @include tablet() {
-        grid-column: 1/4;
-        padding-top: 60px;
-        padding-bottom: 70px;
-        @include fontSize(24px);
+        @include tablet() {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
-      @include desktop() {
-        height: 122px;
-        width: 800px;
-      }
-    }
+      &__title {
+        align-content: center;
 
-    &--article {
-      display: grid;
-      justify-items: center;
-      align-content: center;
-      width: 208px;
+        @include tablet() {
+          @include fontSize(24px);
+          grid-column: 1/4;
+        }
 
-      &--icon {
-        height: 120px;
-        width: 120px;
-        padding-bottom: 20px;
+        @include desktop() {
+          @include fontSize(36px);
+          height: 122px;
+          width: 800px;
+        }
       }
 
-      &--text {
-        padding-top: 12px;
-        color: $secondary-color;
-        line-height: normal;
-        @include fontSize(16px);
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 208px;
+
+        .benefits-item {
+          &__icon {
+            height: 120px;
+            padding-bottom: 20px;
+          }
+
+          &__description {
+            padding-top: 12px;
+            color: $secondary-color;
+            line-height: normal;
+            @include fontSize(16px);
+          }
+        }
       }
     }
   }
+
   // Shipments section
   &__shipments {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: $tertiary-color;
     color: $text-color-secondary;
 
-    &--icon {
-      height: 120px;
-      width: 120px;
-    }
-
-    &--title {
-      font-weight: bold;
-      @include fontSize(24px);
-
-      @include tablet() {
-        @include fontSize(30px);
+    .shipments {
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      @include desktop() {
-        @include fontSize(36px);
-      }
-    }
-
-    &--text {
-      margin-bottom: 20px;
-      @include fontSize(14px);
-
-      @include desktop() {
-        @include fontSize(16px);
-      }
-    }
-    &--link {
-      color: $text-color-secondary;
-      @include fontSize(16px);
-    }
-  }
-  // Shop section
-  &__shop {
-    background-color: $primary-color;
-    display: flex;
-    flex-direction: column;
-
-    @include desktop() {
-      flex-direction: row;
-    }
-    &--content {
-      height: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      text-align: center;
-
-      &--title {
-        @include desktop() {
-          width: 430px;
-          height: 112px;
-        }
+      &__title {
+        color: $text-color-secondary;
+        font-weight: bold;
+        margin-bottom: 10px;
       }
 
-      @include desktop() {
-        height: 100%;
-        width: 50%;
-        align-items: inherit;
-        display: grid;
-        align-content: center;
-        line-height: normal;
-      }
-
-      &--text {
-        color: $secondary-color;
+      &__description {
+        margin-bottom: 30px;
         @include fontSize(14px);
 
         @include desktop() {
-          height: 45px;
-          width: 281px;
-          text-align: left;
           @include fontSize(16px);
         }
       }
     }
-    &--img {
-      width: 100%;
-      height: 50%;
 
-      @include desktop() {
-        height: 100%;
-        width: 50%;
+    .shipments__link {
+      color: $text-color-secondary;
+      @include fontSize(16px);
+    }
+  }
+
+  // Shop section
+  &__shop {
+    @include desktop() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop {
+      &__slogan {
+        text-align: center;
+        background-color: $primary-color;
+        color: $secondary-color;
+
+        @include desktop() {
+          text-align: left;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+
+        .slogan {
+          &__inner {
+            padding: 0 35px;
+            padding-top: 87px;
+            padding-bottom: 92px;
+
+            @include desktop() {
+              width: 620px;
+            }
+          }
+
+          &__title {
+            @include desktop() {
+              width: 430px;
+            }
+          }
+
+          &__description {
+            margin: 10px 0 30px 0;
+            @include fontSize(14px);
+
+            @include desktop() {
+              width: 280px;
+            }
+          }
+        }
+      }
+
+      &__image {
+        height: 300px;
+        background-image: url("../images/creando-espacios.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include tablet() {
+          height: 474px;
+        }
       }
     }
   }
