@@ -31,4 +31,10 @@
     transform: translate(0, -3px);
     cursor: pointer;
   }
+
+  &--ghost {
+    background-color: transparent;
+    color: $text-color-secondary;
+    text-decoration: underline;
+  }
 }
