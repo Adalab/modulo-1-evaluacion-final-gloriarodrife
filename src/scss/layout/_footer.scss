@@ -53,6 +53,10 @@
   &__link {
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
   }
 
   &__scroll-to-top {
