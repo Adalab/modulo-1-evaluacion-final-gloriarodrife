@@ -12,7 +12,7 @@
 .title {
   @include fontSize(24px);
   color: $secondary-color;
-  font-weight: bold;
+  font-weight: 600;
 
   @include tablet() {
     @include fontSize(36px);
@@ -21,7 +21,7 @@
 
 .title--secondary {
   @include fontSize(20px);
-  font-weight: bold;
+  font-weight: 600;
   color: $secondary-color;
   line-height: normal;
 
