@@ -2,12 +2,12 @@
   background-color: $secondary-color;
 
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 50px;
     padding-top: 56px;
     padding-bottom: 56px;
-    position: relative;
 
     @include mobile() {
       padding-left: 146px;
@@ -15,14 +15,14 @@
 
     @include tablet() {
       flex-direction: row;
-      gap: 70px;
       justify-content: flex-start;
+      gap: 70px;
     }
 
     @include desktop() {
-      gap: 200px;
       padding-top: 130px;
       padding-bottom: 130px;
+      gap: 200px;
     }
   }
 
@@ -44,10 +44,10 @@
   }
 
   &__social-links {
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     color: white;
-    margin-top: 20px;
   }
 
   &__link {

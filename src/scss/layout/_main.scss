@@ -1,16 +1,16 @@
 .main {
   // Benefits section
   &__benefits {
-    background-color: $primary-color;
     padding-top: 63px;
     padding-bottom: 63px;
+    background-color: $primary-color;
 
     .benefits {
       &__inner {
         display: grid;
         justify-items: center;
-        gap: 37px;
         text-align: center;
+        gap: 37px;
 
         @include tablet() {
           grid-template-columns: repeat(3, 1fr);
@@ -21,8 +21,8 @@
         align-content: center;
 
         @include tablet() {
-          @include fontSize(24px);
           grid-column: 1/4;
+          @include fontSize(24px);
         }
 
         @include desktop() {
@@ -46,8 +46,8 @@
 
           &__description {
             padding-top: 12px;
-            color: $secondary-color;
             line-height: normal;
+            color: $secondary-color;
             @include fontSize(16px);
           }
         }
@@ -73,9 +73,9 @@
       }
 
       &__title {
-        color: $text-color-secondary;
-        font-weight: bold;
         margin-bottom: 10px;
+        font-weight: bold;
+        color: $text-color-secondary;
       }
 
       &__description {
