@@ -1,4 +1,17 @@
+// hero
+
 .main {
+  &__hero {
+    background-color: $secondary-color;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  .hero {
+    &__link {
+      color: white;
+    }
+  }
   // Benefits section
   &__benefits {
     padding-top: 63px;
